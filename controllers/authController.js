@@ -1,6 +1,7 @@
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
-const { hashPassword } = require('../utilities/password');
+const { hashPassword, comparePasswords } = require('../utilities/password');
+const jwt = require('jsonwebtoken');
 
 async function register(req, res) {
     const data = req.body;
@@ -10,7 +11,7 @@ async function register(req, res) {
         data,
      });
 
-     const token = generateToken(user);
+     const token = jwt.sign(user, process.env.JWT_SECRET, { expiresIn: '1d' })
      res.json({ token, user })
 }
 
