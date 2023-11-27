@@ -5,6 +5,6 @@ const { checkSchema } = require('express-validator');
 const user = require('../validations/user');
 
 router.post('/register', checkSchema(user.register), authController.register);
-router.post('/login', authController.login);
+router.post('/login', checkSchema(user.login), authController.login);
 
 module.exports = router;
