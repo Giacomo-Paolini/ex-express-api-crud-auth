@@ -20,6 +20,12 @@ module.exports = {
             errorMessage: 'Image is required'
         }
     },
+    category: {
+        in: ['body'],
+        notEmpty: {
+            errorMessage: 'Category is required'
+        }
+    },
     tags: {
         in: ['body'],
         notEmpty: {
