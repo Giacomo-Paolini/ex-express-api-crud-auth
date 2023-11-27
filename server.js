@@ -13,7 +13,7 @@ app.use(express.json());
 
 app.use('/posts', postsRouter);
 
-app.use('/', authRouter);
+app.use('', authRouter);
 
 
 app.listen(port, host, () => {
