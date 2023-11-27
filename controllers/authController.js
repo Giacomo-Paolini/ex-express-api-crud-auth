@@ -11,8 +11,8 @@ async function register(req, res) {
         data,
      });
 
-     const token = jwt.sign(user, process.env.JWT_SECRET, { expiresIn: '1d' })
-     res.json({ token, user })
+    const token = jwt.sign(user, process.env.JWT_SECRET, { expiresIn: '1d' })
+    res.json({ token, user })
 }
 
 async function login(req, res) {
