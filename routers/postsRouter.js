@@ -6,7 +6,8 @@ const createPost = require('../validations/createPost');
 const tokenJWT = require('../middlewares/tokenJWT');
 
 router.post('/', 
-// checkSchema(createPost), tokenJWT, 
+checkSchema(createPost), 
+// tokenJWT, 
 postsController.store);
 
 router.get('/:slug', postsController.show);
