@@ -2,51 +2,51 @@ const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
 
 const posts = [
-    {
-        title: "Vette Celesti del Monte Alabastro",
-        slug: "vette-celesti-monte-alabastro",
-        image: "https://picsum.photos/id/177/1920/1080",
-        content: "Esplora le vette surreali del Monte Alabastro, un'esperienza alpinistica unica tra le nuvole e le meraviglie naturali.",
-        published: true,
-        category: "Alpinismo",
-        tags: ["avventura alpina", "panorami celesti", "natura straordinaria"]
-      },
-      {
-        title: "Riserva Selvaggia: Odissea nella Foresta Incantata",
-        slug: "riserva-selvaggia-foresta-incantata",
-        image: "https://picsum.photos/id/121/1920/1080",
-        content: "Avventurati nella foresta incantata di una riserva selvaggia, dove la biodiversità svela segreti di flora e fauna straordinari.",
-        published: true,
-        category: "Trekking",
-        tags: ["avventura selvaggia", "biodiversità magica", "esplorazione unica"]
-      },
-      {
-        title: "Cascate Arcobaleno: Kayak tra le Meraviglie di Iguazù",
-        slug: "cascate-arcobaleno-kayak-iguazu",
-        image: "https://picsum.photos/id/509/1920/1080",
-        content: "Vivi l'arcobaleno di emozioni in un'escursione in kayak attraverso le spettacolari Cascate di Iguazù, un viaggio tra acqua e colore.",
-        published: true,
-        category: "Kayak",
-        tags: ["cascate magiche", "avventura acquatica", "natura vibrante"]
-      },
-      {
-        title: "Machu Picchu: Viaggio nel Cuore degli Inca",
-        slug: "machu-picchu-viaggio-cuore-inca",
-        image: "https://picsum.photos/id/537/1920/1080",
-        content: "Un'avventura culturale nel cuore degli antichi Inca, esplorando i misteri e la grandezza di Machu Picchu.",
-        published: true,
-        category: "Culturale",
-        tags: ["storia millenaria", "cultura antica", "archeologia affascinante"]
-      },
-      {
-        title: "Profondità Incantate: Subacquea nella Barriera di Corallo",
-        slug: "profondita-incantate-subacquea-barriera-corallo",
-        image: "https://picsum.photos/id/552/1920/1080",
-        content: "Esplora le profondità incantate della Grande Barriera Corallina in un'escursione subacquea, immergendoti in un mondo marino colorato e affascinante.",
-        published: true,
-        category: "Subacquea",
-        tags: ["esplorazione subacquea", "barriera corallina magica", "vita marina unica"]
-      }
+  {
+      title: "Celestial Peaks of Mount Alabaster",
+      slug: "celestial-peaks-mount-alabaster",
+      image: "https://picsum.photos/id/177/1920/1080",
+      content: "Explore the surreal peaks of Mount Alabaster, a unique mountaineering experience among the clouds and natural wonders.",
+      published: true,
+      category: "Mountaineering",
+      tags: ["alpine adventure", "celestial panoramas", "extraordinary nature"]
+  },
+  {
+      title: "Wild Reserve: Odyssey in the Enchanted Forest",
+      slug: "wild-reserve-enchanted-forest",
+      image: "https://picsum.photos/id/121/1920/1080",
+      content: "Venture into the enchanted forest of a wild reserve, where biodiversity reveals secrets of extraordinary flora and fauna.",
+      published: true,
+      category: "Trekking",
+      tags: ["wild adventure", "magical biodiversity", "unique exploration"]
+  },
+  {
+      title: "Rainbow Falls: Kayaking amid the Wonders of Iguazu",
+      slug: "rainbow-falls-kayaking-iguazu",
+      image: "https://picsum.photos/id/509/1920/1080",
+      content: "Experience a rainbow of emotions on a kayak excursion through the spectacular Iguazu Falls, a journey through water and color.",
+      published: true,
+      category: "Kayaking",
+      tags: ["magical waterfalls", "aquatic adventure", "vibrant nature"]
+  },
+  {
+      title: "Machu Picchu: Journey into the Heart of the Inca",
+      slug: "machu-picchu-journey-heart-inca",
+      image: "https://picsum.photos/id/537/1920/1080",
+      content: "A cultural adventure in the heart of the ancient Inca, exploring the mysteries and grandeur of Machu Picchu.",
+      published: true,
+      category: "Cultural",
+      tags: ["millenary history", "ancient culture", "fascinating archaeology"]
+  },
+  {
+      title: "Enchanted Depths: Scuba Diving in the Coral Reef",
+      slug: "enchanted-depths-scuba-diving-coral-reef",
+      image: "https://picsum.photos/id/124/1920/1080",
+      content: "Explore the enchanted depths of the Great Barrier Reef on a scuba diving excursion, immersing yourself in a colorful and fascinating marine world.",
+      published: true,
+      category: "Scuba Diving",
+      tags: ["underwater exploration", "magical coral reef", "unique marine life"]
+  }
 ];
 
 (async function () {
