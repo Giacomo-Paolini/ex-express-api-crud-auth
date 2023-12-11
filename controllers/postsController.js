@@ -44,13 +44,19 @@ async function store(req, res, next) {
                     title: data.category,
                 }
             },
-            tags: {
-                create: {
-                    title: data.tags
-                }
-            }           
         }
     })
+    
+    for (let tag of data.tags) {
+        await prisma.post.update({
+            where: { id: newPost.id },
+            data: {
+                tags: {
+                    create: { title: tag.title },
+                },
+            },
+        });
+    }
 
     return res.json(newPost);
 }
